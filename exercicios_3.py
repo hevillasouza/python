@@ -1,3 +1,4 @@
+"""
 # 1. Faça um Programa que leia 5 números inteiros, insira em uma lista e mostre-os.
 print("---------------CRIAÇÃO DE LISTA-------------------")
 lista = []
@@ -101,15 +102,14 @@ for b in range(intervalo,maior):
 print("----------------MAIOR,MENOR E SOMA DA LISTA---------------------")
 listinha = []
 sominha = 0
-ene = int(input("Quantas pessoas deseja cadastrar: "))
+ene = int(input("Quantos números você quer adicionar: "))
 
 for c in range(ene):
     num = float(input("Digite um número: "))
     listinha.append(num)
-    sominha += num
 
 listinha.sort() #aqui altera a ordenação da própria lista
-print(f"O maior número é {listinha[-1]}, o menor número é {listinha[0]} e a soma é {sominha}!\n")  
+print(f"O maior número é {listinha[-1]}, o menor número é {listinha[0]} e a soma é {listinha[-1]+listinha[0]}!\n")  
 
 
 # 10.Desenvolva um gerador de tabuada, capaz de gerar a tabuada de qualquer número inteiro entre 1 a 10. 
@@ -122,6 +122,6 @@ for d in range(11):
     print(f"\t    {d} x {number} = {d*number}")
 print()
 
-
+"""
 
    
