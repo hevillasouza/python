@@ -31,8 +31,30 @@ while b <= 50:
         print(b)
     b = b + 1
 
+# Teste função
+num1 = float(input("Digite o valor do primeiro número: "))
+num2 = float(input("Digite o valor do segundo número: "))
+num3 = float(input("Digite o valor do terceiro número: "))
+
+def somatorio(n1,n2,n3):
+    soma = n1 + n2 + n3
+    return soma
+
+print("A soma é",somatorio(num1,num2,num3))
+
 """
 
+# Quantidade de números pares
+lista = [1,2,3,2,1,2,3,4,5,6,5,4,3,2,1,8,10,12]
 
+def quant_pares(lista):
+    cont = 0
+    for i in lista:
+        if i % 2 == 0:
+            cont += 1
+    return cont
+
+print("A lista é",lista)
+print("A quantidade de números pares é",quant_pares(lista),"!")
 
 
