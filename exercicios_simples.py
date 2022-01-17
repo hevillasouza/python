@@ -1,4 +1,12 @@
 """
+# seria para setar as respostas em português
+import locale
+locale.setlocale(locale.LC_ALL, "pt_br")
+"""
+
+
+
+"""
 # Exercícios frutas
 salada_frutas = ["Maça","Laranja","Uva","Mamão","Melão"]
 print("A lista inicial é",salada_frutas)
@@ -42,7 +50,6 @@ def somatorio(n1,n2,n3):
 
 print("A soma é",somatorio(num1,num2,num3))
 
-"""
 
 # Quantidade de números pares
 lista = [1,2,3,2,1,2,3,4,5,6,5,4,3,2,1,8,10,12]
@@ -57,4 +64,16 @@ def quant_pares(lista):
 print("A lista é",lista)
 print("A quantidade de números pares é",quant_pares(lista),"!")
 
+
+# dizer o dia da semana que nasceu
+import datetime
+
+dia = int(input("Qual o dia que você nasceu? "))
+mes = int(input("Qual o mês que você nasceu? "))
+ano = int(input("Qual o ano que você nasceu? "))
+
+data_nasc = datetime.datetime(ano,mes,dia)
+
+print("\nVocê nasceu no dia da semana:",data_nasc.strftime("%A"))
+"""
 
