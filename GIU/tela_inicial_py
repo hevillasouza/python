@@ -1,0 +1,91 @@
+from tkinter import *
+
+class Application:
+    def __init__(self, master=None):
+        
+        #criação dos containes
+        self.container1 = Frame(master)
+        self.container1["pady"] = 15
+        self.container1["padx"] = 20
+        self.container1.pack()
+
+        self.container2 = Frame(master)
+        self.container2["pady"] = 2
+        self.container2.pack()
+
+        self.container3 = Frame(master)
+        self.container3["pady"] = 8
+        self.container3.pack()
+
+        self.container4 = Frame(master)
+        self.container4["pady"] = 15
+        self.container4.pack()
+
+        self.container5 = Frame(master)
+        self.container5["pady"] = 15
+        self.container5.pack()
+
+        #texto para printar o título
+        self.titulo = Label(self.container1, text="--- LOGIN DO USUÁRIO ---")
+        self.titulo["font"] = ("Arial", "10", "bold")
+        self.titulo.pack()
+
+        # para printar "usuário"
+        self.lbl_usuario = Label(self.container2, text="usuário:")
+        self.lbl_usuario["font"] = ("Arial", "10", "bold")
+        self.lbl_usuario.pack(side=LEFT)
+
+        # para pegar o nome do usuário
+        self.txt_usuario = Entry(self.container2)
+        self.txt_usuario["width"] = 10
+        self.txt_usuario["font"] = ("Arial", "10")
+        self.txt_usuario.pack(side=LEFT)
+
+        # para printar "senha"
+        self.lbl_senha = Label(self.container3, text="senha:")
+        self.lbl_senha["font"] = ("Arial", "10", "bold")
+        self.lbl_senha.pack(side=LEFT)
+
+        # para pegar a senha
+        self.txt_senha = Entry(self.container3)
+        self.txt_senha["width"] = 10
+        self.txt_senha["font"] = ("Arial", "10")
+        self.txt_senha.pack(side=LEFT)
+
+        # criando o botao de login
+        self.bnt_login = Button(self.container4)
+        self.bnt_login["text"] = "LOGIN"
+        self.bnt_login["font"] = ("Calibri", "10","bold")
+        self.bnt_login["width"] = 8
+        self.bnt_login["command"] = self.login
+        self.bnt_login.pack(side=LEFT)
+
+        # criando o botão (widget) de sair
+        self.sair = Button(self.container4) # ese comando é para criar um botão
+        self.sair["text"] = "SAIR" # o texto que vai aparecer
+        self.sair["font"] = ("Calibri", "10","bold") # formatando
+        self.sair["width"] = 8 # largura do botão
+        self.sair["command"] = self.container4.quit # o comando que o widget vai executar
+        self.sair.pack () # registrando
+
+        # criando o texto para o resultado
+        self.lbl_resultado = Label(self.container5, text="")
+        self.lbl_resultado["font"] = ("Arial", "10", "bold")
+        self.lbl_resultado.pack()
+
+    def login(self):
+        usuario = self.txt_usuario.get()
+        senha = self.txt_senha.get()
+        if usuario == senha:
+            self.lbl_resultado["text"] = "Usuário inválido!"
+        else:
+            self.lbl_resultado["text"] = "Bem-vind@ ao sistema!"
+
+
+
+root = Tk()
+root.title("Tela inicial do sistema") #para trocar o título
+root.geometry("350x280") #para configurar o tamanho
+#root.eval("tk::PlaceWindow . center")
+Application(root)
+root.mainloop()

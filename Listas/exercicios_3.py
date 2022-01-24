@@ -1,4 +1,3 @@
-"""
 # 1. Faça um Programa que leia 5 números inteiros, insira em uma lista e mostre-os.
 print("---------------CRIAÇÃO DE LISTA-------------------")
 lista = []
@@ -99,7 +98,7 @@ for b in range(intervalo,maior):
 
 
 # 9. programa que, dado um conjunto de N números, determine o menor valor, o maior valor e a soma dos valores.
-print("----------------MAIOR,MENOR E SOMA DA LISTA---------------------")
+print("----------------MAIOR, MENOR E SOMA DA LISTA---------------------")
 listinha = []
 sominha = 0
 ene = int(input("Quantos números você quer adicionar: "))
@@ -122,6 +121,6 @@ for d in range(11):
     print(f"\t    {d} x {number} = {d*number}")
 print()
 
-"""
+
 
    
